@@ -89,11 +89,7 @@ chrome.commands.onCommand.addListener((command, tab) => {
   if (command === 'toggle-side-panel') {
     if (tab?.windowId) {
       if (openSidePanels.has(tab.windowId)) {
-        // @ts-ignore - sidePanel.close is available in Chrome 123+
-        if (chrome.sidePanel.close) {
-          // @ts-ignore
-          chrome.sidePanel.close({ windowId: tab.windowId });
-        }
+        chrome.sidePanel.close({ windowId: tab.windowId });
       } else {
         chrome.sidePanel.open({ windowId: tab.windowId });
       }
