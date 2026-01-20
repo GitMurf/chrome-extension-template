@@ -258,8 +258,8 @@ The `dist/` folder contains everything needed for Chrome Web Store submission:
 
 - Built with modern tooling from the [Oxc](https://oxc.rs) project and the Vite ecosystem.
 - Used the following Guides and Templates for inspiration:
-    - https://www.artmann.co/articles/building-a-chrome-extension-with-vite-react-and-tailwind-css-in-2025
-    - https://medium.com/@jamesprivett29/02-building-a-chrome-extension-template-using-vite-react-and-typescript-d5d9912f1b40
-    - https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite
-    - https://github.com/JohnBra/vite-web-extension
+  - https://www.artmann.co/articles/building-a-chrome-extension-with-vite-react-and-tailwind-css-in-2025
+  - https://medium.com/@jamesprivett29/02-building-a-chrome-extension-template-using-vite-react-and-typescript-d5d9912f1b40
+  - https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite
+  - https://github.com/JohnBra/vite-web-extension
 - See my Tweets on X about "coding in public": https://x.com/GitMurf/status/2013376160454058472
