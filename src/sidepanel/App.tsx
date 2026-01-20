@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { sendMessage, useTheme } from "@/shared";
-import type { Settings, SessionState } from "@/shared/storage";
+import { useState, useEffect } from 'react';
+import { sendMessage, useTheme } from '@/shared';
+import type { Settings, SessionState } from '@/shared/storage';
 
 export function App() {
   const [settings, setSettings] = useState<Settings | null>(null);
@@ -10,27 +10,27 @@ export function App() {
 
   useEffect(() => {
     // Establish connection to background to track if side panel is open
-    const port = chrome.runtime.connect({ name: "sidepanel" });
+    const port = chrome.runtime.connect({ name: 'sidepanel' });
 
     // Send window ID to background for toggle state tracking
     chrome.windows.getCurrent().then((win) => {
       if (win.id !== undefined) {
-        port.postMessage({ type: "INIT_SIDEPANEL", windowId: win.id });
+        port.postMessage({ type: 'INIT_SIDEPANEL', windowId: win.id });
       }
     });
 
-    sendMessage("GET_SETTINGS").then(setSettings);
-    sendMessage("GET_SESSION").then(setSession);
+    sendMessage('GET_SETTINGS').then(setSettings);
+    sendMessage('GET_SESSION').then(setSession);
 
     // Listen for storage changes to update in real-time
     const handleStorageChange = (changes: {
       [key: string]: chrome.storage.StorageChange;
     }) => {
       if (changes.settings) {
-        sendMessage("GET_SETTINGS").then(setSettings);
+        sendMessage('GET_SETTINGS').then(setSettings);
       }
       if (changes.session) {
-        sendMessage("GET_SESSION").then(setSession);
+        sendMessage('GET_SESSION').then(setSession);
       }
     };
 
@@ -44,7 +44,7 @@ export function App() {
   }, []);
 
   const handleIncrement = async () => {
-    const result = await sendMessage("INCREMENT_CLICK");
+    const result = await sendMessage('INCREMENT_CLICK');
     setSession((prev) => (prev ? { ...prev, clickCount: result.count } : null));
   };
 
@@ -77,7 +77,7 @@ export function App() {
               Notifications:
             </span>
             <span>
-              {settings.notificationsEnabled ? "Enabled" : "Disabled"}
+              {settings.notificationsEnabled ? 'Enabled' : 'Disabled'}
             </span>
           </div>
           <div className="flex justify-between">

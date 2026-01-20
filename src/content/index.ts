@@ -9,7 +9,7 @@
 // Notify background that content script loaded
 chrome.runtime
   .sendMessage({
-    type: "CONTENT_LOADED",
+    type: 'CONTENT_LOADED',
     payload: { url: window.location.href },
   })
   .then((response) => {
@@ -24,16 +24,16 @@ chrome.runtime
 // Listen for messages from popup/sidepanel
 chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
   switch (message.type) {
-    case "GET_PAGE_TITLE":
+    case 'GET_PAGE_TITLE':
       sendResponse({ title: document.title });
       break;
 
-    case "HIGHLIGHT_PAGE":
+    case 'HIGHLIGHT_PAGE':
       highlightPage();
       sendResponse({ success: true });
       break;
 
-    case "GET_PAGE_INFO":
+    case 'GET_PAGE_INFO':
       sendResponse({
         title: document.title,
         url: window.location.href,
@@ -57,8 +57,8 @@ function highlightPage(): void {
   const originalOffset = body.style.outlineOffset;
 
   // Use !important via setProperty to override page styles
-  body.style.setProperty("outline", "4px solid #4ade80", "important");
-  body.style.setProperty("outline-offset", "-4px", "important");
+  body.style.setProperty('outline', '4px solid #4ade80', 'important');
+  body.style.setProperty('outline-offset', '-4px', 'important');
 
   setTimeout(() => {
     body.style.outline = originalOutline;
@@ -68,7 +68,7 @@ function highlightPage(): void {
 
 function getMetaDescription(): string {
   const meta = document.querySelector('meta[name="description"]');
-  return meta?.getAttribute("content") ?? "";
+  return meta?.getAttribute('content') ?? '';
 }
 
 // Mark that content script is loaded
