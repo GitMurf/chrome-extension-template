@@ -7,13 +7,23 @@ settings:
 importers:
 
   .:
+    dependencies:
+      chrome-types:
+        specifier: 0.1.414
+        version: 0.1.414
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      react-dom:
+        specifier: 19.2.3
+        version: 19.2.3(react@19.2.3)
+      zod:
+        specifier: 4.3.5
+        version: 4.3.5
     devDependencies:
       '@tailwindcss/vite':
         specifier: 4.1.18
         version: 4.1.18(vite@8.0.0-beta.8(@types/node@25.0.9)(esbuild@0.27.2)(jiti@2.6.1))
-      '@types/chrome':
-        specifier: 0.1.34
-        version: 0.1.34
       '@types/node':
         specifier: 25.0.9
         version: 25.0.9
@@ -38,12 +48,6 @@ importers:
       oxlint:
         specifier: 1.41.0
         version: 1.41.0
-      react:
-        specifier: 19.2.3
-        version: 19.2.3
-      react-dom:
-        specifier: 19.2.3
-        version: 19.2.3(react@19.2.3)
       tailwindcss:
         specifier: 4.1.18
         version: 4.1.18
@@ -56,9 +60,6 @@ importers:
       vitest:
         specifier: 4.0.17
         version: 4.0.17(@types/node@25.0.9)(jiti@2.6.1)(jsdom@27.4.0)(lightningcss@1.30.2)
-      zod:
-        specifier: 4.3.5
-        version: 4.3.5
 
 packages:
 
@@ -788,23 +789,11 @@ packages:
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
 
-  '@types/chrome@0.1.34':
-    resolution: {integrity: sha512-a1xk47dohzk4gAMeHy58gWp/RC5XyR0lzGfurj762TRcE3U3LVZG+qWNTZhQjcYRKK7b+x0BumGMN0l6x4Ttow==}
-
   '@types/deep-eql@4.0.2':
     resolution: {integrity: sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
-
-  '@types/filesystem@0.0.36':
-    resolution: {integrity: sha512-vPDXOZuannb9FZdxgHnqSwAG/jvdGM8Wq+6N4D/d80z+D4HWH+bItqsZaVRQykAn6WEVeEkLm2oQigyHtgb0RA==}
-
-  '@types/filewriter@0.0.33':
-    resolution: {integrity: sha512-xFU8ZXTw4gd358lb2jw25nxY9QAgqn2+bKKjKOYfNCzN4DKCFetK7sPtrlpg66Ywe3vWY9FNxprZawAh9wfJ3g==}
-
-  '@types/har-format@1.2.16':
-    resolution: {integrity: sha512-fluxdy7ryD3MV6h8pTfTYpy/xQzCFC7m89nOH9y94cNqJ1mDIDPut7MnRHI3F6qRmh/cT2fUjG1MLdCNb4hE9A==}
 
   '@types/node@25.0.9':
     resolution: {integrity: sha512-/rpCXHlCWeqClNBwUhDcusJxXYDjZTyE8v5oTO7WbL8eij2nKhUeU89/6xgjU7N4/Vh3He0BtyhJdQbDyhiXAw==}
@@ -917,6 +906,9 @@ packages:
   chai@6.2.2:
     resolution: {integrity: sha512-NUPRluOfOiTKBKvWPtSD4PhFvWCqOi0BGStNWs57X9js7XGTprSmFoz5F0tWhR4WPjNeR9jXqdC7/UpSJTnlRg==}
     engines: {node: '>=18'}
+
+  chrome-types@0.1.414:
+    resolution: {integrity: sha512-JHVGPl3bwCduuzfTRhsDxVbIDw8RdYVzv9xMOSc7Hr1DPgvmxAbTrcpO6si1SFDCAPcQDhS2EfCbsqy9ZOCzbA==}
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
@@ -2000,22 +1992,9 @@ snapshots:
       '@types/deep-eql': 4.0.2
       assertion-error: 2.0.1
 
-  '@types/chrome@0.1.34':
-    dependencies:
-      '@types/filesystem': 0.0.36
-      '@types/har-format': 1.2.16
-
   '@types/deep-eql@4.0.2': {}
 
   '@types/estree@1.0.8': {}
-
-  '@types/filesystem@0.0.36':
-    dependencies:
-      '@types/filewriter': 0.0.33
-
-  '@types/filewriter@0.0.33': {}
-
-  '@types/har-format@1.2.16': {}
 
   '@types/node@25.0.9':
     dependencies:
@@ -2132,6 +2111,8 @@ snapshots:
   caniuse-lite@1.0.30001765: {}
 
   chai@6.2.2: {}
+
+  chrome-types@0.1.414: {}
 
   convert-source-map@2.0.0: {}
 
