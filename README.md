@@ -4,7 +4,7 @@
 
 A modern, production-ready "Hello World" demonstrating **all 8 major extension features** using a high-performance tech stack: Vite 8 (Beta w/ Rolldown), React 19, Tailwind 4, Zod 4, and Oxc dev tooling.
 
-<!-- 📸 SCREENSHOT: Hero image showing the extension icon in toolbar with popup open, side panel visible, and a page with the green highlight effect -->
+<img width="1686" height="1190" alt="image" src="https://github.com/user-attachments/assets/902f94c2-aca2-489d-a40d-a3d2ccbd7ba8" />
 
 ---
 
@@ -45,22 +45,28 @@ This template implements every major Chrome Extension capability:
 ### Popup
 
 <!-- 📸 SCREENSHOT: Extension popup showing "Extension Template" header, greeting message, click counter with large number, and three buttons (Click Me, Notify, Highlight) -->
+<img width="515" height="437" alt="image" src="https://github.com/user-attachments/assets/f113b52f-d702-4170-a1ab-dc8a85c0d352" />
 
 ### Side Panel
 
 <!-- 📸 SCREENSHOT: Side panel showing "Side Panel" header, Current Settings section (Theme, Notifications, Greeting), Session State with large click count, and Increment Counter button -->
+<img width="680" height="1200" alt="image" src="https://github.com/user-attachments/assets/d8b736fd-6d47-40db-b300-3e8081cc2d83" />
 
 ### Options Page
 
 <!-- 📸 SCREENSHOT: Options page with "Extension Options" header, theme dropdown (System/Light/Dark), notifications toggle switch, custom greeting text input, and Save Settings button -->
+<img width="727" height="639" alt="image" src="https://github.com/user-attachments/assets/d2d546bd-811d-4ee1-8e7e-367ff20fbb8c" />
 
 ### Dark Mode
 
 <!-- 📸 SCREENSHOT: Any of the above pages in dark mode to demonstrate the theme system -->
+<img width="578" height="682" alt="image" src="https://github.com/user-attachments/assets/9409b8bf-e726-4ce9-969b-fd4d109ca13a" />
+<img width="657" height="682" alt="image" src="https://github.com/user-attachments/assets/51a773a5-0235-400e-abfc-0e329f03fd51" />
 
 ### Content Script Highlight
 
 <!-- 📸 SCREENSHOT: A webpage with a green border outline effect (the highlight feature) -->
+<img width="518" height="355" alt="image" src="https://github.com/user-attachments/assets/7bbbeccd-ba07-4731-b11f-66ee6f710f1f" />
 
 ---
 
@@ -94,6 +100,7 @@ pnpm build
 4. Select the `dist/` folder
 
 <!-- 📸 SCREENSHOT: Chrome extensions page with Developer mode enabled and the extension loaded, showing the extension card with icon and version -->
+<img width="513" height="466" alt="image" src="https://github.com/user-attachments/assets/8d92842d-919f-4c4b-9d28-3d536733a245" />
 
 ---
 
