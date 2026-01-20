@@ -10,7 +10,7 @@ export function App() {
 
   useEffect(() => {
     // Establish connection to background to track if side panel is open
-    const port = chrome.runtime.connect({ name: 'sidepanel' });
+    const port = chrome.runtime.connect(undefined, { name: 'sidepanel' });
 
     // Send window ID to background for toggle state tracking
     chrome.windows.getCurrent().then((win) => {
